@@ -4,22 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index, follow" />
-  <meta name="description" content="Cássio Winkler" />
-  <meta name="keywords" content="Cássio Winkler, contato, formulário" />
+  <meta name="description" content="Entre em contato com Cássio Winkler." />
+  <meta name="keywords" content="Cássio Winkler" />
   <meta name="author" content="Cássio Winkler" />
   <meta property="og:title" content="Cássio Winkler" />
   <meta property="og:description" content="Entre em contato com Cássio Winkler." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
+  <meta property="og:url" content="https://www.cassio.tec.br" />
+  <meta property="og:image" content="https://fcamara.com/blog/wp-content/uploads/2024/08/Consultoria-de-ti-desenvolvimento-de-software-FCamara-1024x597.webp" />
   <title>Cássio Winkler</title>
-
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-
     html, body {
       height: 100%;
       font-family: system-ui, sans-serif;
@@ -30,7 +30,6 @@
       justify-content: center;
       padding: 1rem;
     }
-
     main {
       width: 100%;
       max-width: 480px;
@@ -39,25 +38,21 @@
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
     }
-
     h1 {
       text-align: center;
       margin-bottom: 0.5rem;
     }
-
     p {
       text-align: center;
       font-size: 0.95rem;
       margin-bottom: 1.5rem;
     }
-
     label {
       display: block;
       font-weight: bold;
       margin-bottom: 0.2rem;
       font-size: 0.9rem;
     }
-
     input, textarea {
       width: 100%;
       padding: 0.6rem;
@@ -68,11 +63,9 @@
       background-color: #00434b;
       color: #fff;
     }
-
     input::placeholder, textarea::placeholder {
       color: #ccc;
     }
-
     button {
       width: 100%;
       padding: 0.8rem;
@@ -84,11 +77,9 @@
       cursor: pointer;
       transition: background 0.3s ease;
     }
-
     button:hover {
       background-color: #015255;
     }
-
     @media (max-height: 600px) {
       html, body {
         align-items: flex-start;
@@ -98,49 +89,37 @@
   </style>
 </head>
 <body>
-
   <main role="main">
     <h1>Cássio Winkler</h1>
     <p>Entre em contato comigo através do formulário abaixo:</p>
-
     <form id="contactForm" aria-label="Formulário de contato">
       <label for="nome">Nome:</label>
       <input type="text" id="nome" required placeholder="Digite seu nome" />
-
       <label for="email">E-mail:</label>
       <input type="email" id="email" required placeholder="Digite seu e-mail" />
-
       <label for="telefone">Telefone:</label>
       <input type="tel" id="telefone" required placeholder="Digite seu telefone" />
-
       <label for="assunto">Assunto:</label>
       <input type="text" id="assunto" required placeholder="Digite o assunto" />
-
       <label for="mensagem">Mensagem:</label>
       <textarea id="mensagem" rows="3" required placeholder="Escreva sua mensagem"></textarea>
-
       <button type="submit">Enviar para WhatsApp</button>
     </form>
   </main>
   <script>
     const encodedPhone = "NDI5OTk4MzU0OTc=";
-
     function decodePhone(b64) {
       return atob(b64);
     }
-
     document.getElementById("contactForm").addEventListener("submit", function (e) {
       e.preventDefault();
-
       const nome = document.getElementById("nome").value.trim();
       const email = document.getElementById("email").value.trim();
       const telefone = document.getElementById("telefone").value.trim();
       const assunto = document.getElementById("assunto").value.trim();
       const mensagem = document.getElementById("mensagem").value.trim();
-
       const texto = `*Nome:* ${nome}%0A*E-mail:* ${email}%0A*Telefone:* ${telefone}%0A*Assunto:* ${assunto}%0A*Mensagem:* ${mensagem}`;
       const whatsapp = decodePhone(encodedPhone);
-
       window.open(`https://wa.me/55${whatsapp}?text=${texto}`, "_blank");
     });
   </script>
@@ -155,12 +134,10 @@
         return false;
       }
     });
-
     document.addEventListener('contextmenu', function (e) {
       e.preventDefault();
       return false;
     });
   </script>
-
 </body>
 </html>
